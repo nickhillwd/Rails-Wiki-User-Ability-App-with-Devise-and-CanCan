@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :comments
-  has_many :articles, through: :comments
+  
   has_many :articles
 end
