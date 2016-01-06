@@ -5,16 +5,16 @@ class Ability
     user ||= User.new
 
     if user.role? :admin
-        can :manage, :all
+      can :manage, :all
     elsif
-        user.role? :author
-        can :read, Article
-        can :create, Article
-        can :update, Article do |atricle|
-            article.user == user
+      user.role? :author
+      can :read, Article
+      can :create, Article
+      can :update, Article do |atricle|
+        article.user == user
         end
     else
-        can :read, Article
+      can :read, Article
     end
 
     # Define abilities for the passed in user here. For example:
