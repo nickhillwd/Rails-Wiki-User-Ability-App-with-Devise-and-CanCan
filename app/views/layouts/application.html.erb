@@ -8,11 +8,17 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <nav>
+    <ul>
+      <li> <%= link_to "Sign In", new_user_session_path %> </li>
+    </ul>
+  </nav>
 
-<%= yield %>
-<%= debug(params) if Rails.env.development? %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+  <%= debug(params) if Rails.env.development? %>
 
 </body>
 </html>
