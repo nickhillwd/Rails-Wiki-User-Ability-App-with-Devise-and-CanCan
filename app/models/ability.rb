@@ -8,9 +8,9 @@ class Ability
       can :manage, :all
     elsif
       user.role? :author
-      can :read, Article
-      can :create, Article
-      can :update, Article do |atricle|
+      can :read, Article 
+      can :create, Article 
+      can :update, Article do |article|
         article.user == user
         end
     else
